@@ -2,8 +2,10 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Title from "../components/Title"
+// import { Link } from "gatsby"
 import Image from "gatsby-image"
 import SEO from "../components/SEO"
+import downloadFile from "../assets/Gustave_Resume.pdf"
 const About = ({
   data: {
     about: { nodes },
@@ -20,6 +22,10 @@ const About = ({
             <Title title={title} />
             <p>{info}</p>
             <div className="about-stack">
+              <a href={downloadFile} download className="btn">
+                my resume
+              </a>
+              <br />
               {stack.map(item => {
                 return <span key={item.id}>{item.title}</span>
               })}
@@ -29,7 +35,6 @@ const About = ({
       </section>
     </Layout>
   )
-  return <h2>about page</h2>
 }
 export const query = graphql`
   {

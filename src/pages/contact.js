@@ -9,7 +9,13 @@ const contact = () => {
       <section className="contact-page">
         <article className="contact-form">
           <h3>get in touch</h3>
-          <form action="https://formspree.io/xrgynnkl" method="POST">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify-recaptcha="true"
+            data-netlify-honeypot="bot-field"
+            data-netlify="true"
+          >
             <div className="form-group">
               <input
                 type="text"
@@ -29,7 +35,9 @@ const contact = () => {
                 placeholder="message"
                 className="form-control"
               ></textarea>
+              <div data-netlify-recaptcha="true"></div>
             </div>
+
             <button type="submit" className="submit-btn btn">
               Submit Here
             </button>

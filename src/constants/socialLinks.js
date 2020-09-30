@@ -2,37 +2,49 @@ import React from "react"
 import {
   FaGithubSquare,
   FaLinkedin,
-  FaInstagramSquare,
+  // FaInstagramSquare,
   FaMediumM,
-  FaTwitterSquare,
+  // FaTwitterSquare,
 } from "react-icons/fa"
 
 const data = [
   {
     id: 1,
-    icon: <FaGithubSquare className="social-icon"></FaGithubSquare>,
-    url: "https://www.twitter.com",
+    icon: (
+      <FaGithubSquare className="social-icon" target="_blank"></FaGithubSquare>
+    ),
+    url: "https://github.com/gustaveH",
   },
   {
     id: 2,
-    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-    url: "https://www.twitter.com",
+    icon: <FaLinkedin className="social-icon" target="_blank"></FaLinkedin>,
+    url: "https://www.linkedin.com/in/gustave-habimana/",
   },
-  {
-    id: 3,
-    icon: <FaInstagramSquare className="social-icon"></FaInstagramSquare>,
-    url: "https://www.twitter.com",
-  },
+  // {
+  //   id: 3,
+  //   icon: (
+  //     <FaInstagramSquare
+  //       className="social-icon"
+  //       target="_blank"
+  //     ></FaInstagramSquare>
+  //   ),
+  //   url: "https://www.instagram.com/_habimana_/",
+  // },
   {
     id: 4,
-    icon: <FaMediumM className="social-icon"></FaMediumM>,
-    url: "https://www.twitter.com",
+    icon: <FaMediumM className="social-icon" target="_blank"></FaMediumM>,
+    url: "https://medium.com/@Habimana",
   },
-  {
-    id: 5,
-    icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
-    url: "https://www.twitter.com",
-  },
+  // {
+  //   id: 5,
+  //   icon: (
+  //     <FaTwitterSquare
+  //       className="social-icon"
+  //       target="_blank"
+  //     ></FaTwitterSquare>
+  //   ),
+  //   url: "https://twitter.com/_Habimana_",
+  // },
 ]
 const links = data.map(link => {
   return (
